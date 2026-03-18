@@ -1,0 +1,126 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: white;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: #020617;
+}
+
+nav h2 {
+    color: #38bdf8;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.hero h1 {
+    font-size: 55px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+/* Buttons */
+.btn, button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+    background: #0ea5e9;
+}
+
+/* Container (MAIN CENTERING SYSTEM) */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+/* Cards */
+.card {
+    display: inline-block;
+    background: #020617;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 220px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #1e293b;
+}
+
+/* Blog Cards */
+.blog {
+    background: #020617;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    width: 60%;
+    text-align: left;
+}
+
+/* Forms */
+input, textarea {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 6px;
+    border: none;
+}
+
+/* Roadmap Boxes */
+.year {
+    width: 60%;
+    margin: 20px auto;
+    text-align: left;
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Center full page (Login page) */
+.center-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

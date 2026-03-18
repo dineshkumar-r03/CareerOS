@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CareerOS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>CareerOS Dashboard</h2>
+        <button onclick="logout()">Logout</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1 id="welcome"></h1>
+
+        <div class="card" onclick="goTo('blogs.html')">
+            <h3>Explore Blogs</h3>
+            <p>Read experiences from seniors</p>
+        </div>
+
+        <div class="card" onclick="goTo('roadmap.html')">
+            <h3>View Roadmaps</h3>
+            <p>Know what to do each year</p>
+        </div>
+    </div>
+
+    <script>
+        let user = localStorage.getItem("user");
+
+        if(user) {
+            document.getElementById("welcome").innerText = "Welcome back, " + user + " 👋";
+        } else {
+            window.location.href = "login.html";
+        }
+
+        function logout() {
+            localStorage.removeItem("user");
+            window.location.href = "index.html";
+        }
+
+        function goTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>

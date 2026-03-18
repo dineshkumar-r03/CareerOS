@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blogs - CareerOS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Blogs</h2>
+
+        <button onclick="goToAdd()">Add Blog</button>
+
+        <div id="blogList"></div>
+    </div>
+    <script>
+        function goToAdd() {
+            window.location.href = "add-blog.html";
+        }
+
+        let blogs = JSON.parse(localStorage.getItem("blogs")) || [];
+
+        let container = document.getElementById("blogList");
+
+        if(blogs.length === 0) {
+            container.innerHTML = "<p>No blogs yet</p>";
+        } else {
+            blogs.forEach(blog => {
+                let div = document.createElement("div");
+                div.className = "blog";
+                div.innerHTML = `<h3>${blog.title}</h3><p>${blog.content}</p>`;
+                container.appendChild(div);
+            });
+        }
+    </script>
+
+</body>
+</html>
